@@ -35,5 +35,37 @@ namespace Quarks.Specifications
 				Predicate = _expression?.Compile();
 			}
 		}
-    }
+
+		/// <summary>
+		///  And operator
+		/// </summary>
+		/// <param name="leftSideSpecification">left operand in this AND operation</param>
+		/// <param name="rightSideSpecification">right operand in this AND operation</param>
+		/// <returns>New specification</returns>
+		public static Specification<TEntity> operator &(Specification<TEntity> leftSideSpecification, Specification<TEntity> rightSideSpecification)
+		{
+			return new AndSpecification<TEntity>(leftSideSpecification, rightSideSpecification);
+		}
+
+		/// <summary>
+		/// Or operator
+		/// </summary>
+		/// <param name="leftSideSpecification">left operand in this OR operation</param>
+		/// <param name="rightSideSpecification">left operand in this OR operation</param>
+		/// <returns>New specification </returns>
+		public static Specification<TEntity> operator |(Specification<TEntity> leftSideSpecification, Specification<TEntity> rightSideSpecification)
+		{
+			return new OrSpecification<TEntity>(leftSideSpecification, rightSideSpecification);
+		}
+
+		/// <summary>
+		/// Not specification
+		/// </summary>
+		/// <param name="specification">Specification to negate</param>
+		/// <returns>New specification</returns>
+		public static Specification<TEntity> operator !(Specification<TEntity> specification)
+		{
+			return new NotSpecification<TEntity>(specification);
+		}
+	}
 }
