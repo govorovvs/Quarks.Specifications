@@ -1,4 +1,14 @@
 ﻿{
+  "title": "Quarks.Specifications",
+  "description": "Foundations for specifications",
+
+  "packOptions": {
+    "authors": [ "victor.govorov" ],
+    "owners": [ "victor.govorov" ],
+    "projectUrl": "https://github.com/govorovvs/Specifications",
+    "tags": [ "architecture", "specification" ]
+  },
+
   "version": "1.0.0-*",
 
   "frameworks": {
