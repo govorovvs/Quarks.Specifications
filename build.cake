@@ -44,12 +44,7 @@ Task("Initialize")
 Task("Restore")
     .Does(() =>
     {
-		var settings = new DotNetCoreRestoreSettings
-		{
-			Verbosity = DotNetCoreRestoreVerbosity.Verbose
-		};
-
-        DotNetCoreRestore(settings);
+        DotNetCoreRestore();
     }
 );
 
