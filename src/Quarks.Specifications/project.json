@@ -6,6 +6,10 @@
     "authors": [ "victor.govorov" ],
     "owners": [ "victor.govorov" ],
     "projectUrl": "https://github.com/govorovvs/Specifications",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/govorovvs/Specifications"
+    },
     "tags": [ "architecture", "specification" ]
   },
 
