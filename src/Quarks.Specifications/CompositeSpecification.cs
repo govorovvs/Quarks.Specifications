@@ -9,6 +9,11 @@ namespace Quarks.Specifications
 	public abstract class CompositeSpecification<TEntity> : Specification<TEntity>
 		 where TEntity : class
 	{
+        /// <summary>
+        /// Initializes a new instance of <see cref="CompositeSpecification{TEntity}" /> class.
+        /// </summary>
+        /// <param name="leftSide">Left side specification</param>
+		/// <param name="rightSide">Right side specification</param>
 		protected CompositeSpecification(Specification<TEntity> leftSide, Specification<TEntity> rightSide)
 		{
 			if (leftSide == null) throw new ArgumentNullException(nameof(leftSide));

@@ -7,6 +7,9 @@
 	public sealed class FalseSpecification<TEntity> : Specification<TEntity>
 		where TEntity : class
 	{
+        /// <summary>
+        /// Initializes a new instance of <see cref="FalseSpecification{TEntity}"/> class.
+        /// </summary>
 		public FalseSpecification()
 		{
 			//Create "result variable" transform adhoc execution plan in prepared plan

@@ -7,6 +7,9 @@
 	public sealed class TrueSpecification<TEntity> : Specification<TEntity>
 		where TEntity : class
 	{
+        /// <summary>
+        /// Initializes a new instance of <see cref="TrueSpecification{TEntity}"/> class.
+        /// </summary>
 		public TrueSpecification()
 		{
 			//Create "result variable" transform adhoc execution plan in prepared plan

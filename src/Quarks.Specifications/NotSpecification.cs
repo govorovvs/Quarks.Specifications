@@ -5,8 +5,7 @@ using System.Linq.Expressions;
 namespace Quarks.Specifications
 {
 	/// <summary>
-	/// NotSpecification convert a original
-	/// specification with NOT logic operator
+	/// NotSpecification convert a original specification with NOT logic operator
 	/// </summary>
 	/// <typeparam name="TEntity">Type of element for this specificaiton</typeparam>
 	public sealed class NotSpecification<TEntity> : Specification<TEntity>
@@ -14,25 +13,25 @@ namespace Quarks.Specifications
 	{
 		private Specification<TEntity> _originalSpecification;
 
-		/// <summary>
-		/// Constructor for NotSpecificaiton
-		/// </summary>
-		/// <param name="originalSpecification">Original specification</param>
-		public NotSpecification(Specification<TEntity> originalSpecification)
+        /// <summary>
+        /// Initializes a new instance of <see cref="NotSpecification{TEntity}"/> class.
+        /// </summary>
+        /// <param name="originalSpecification">Original specification</param>
+        public NotSpecification(Specification<TEntity> originalSpecification)
 		{
 			OriginalSpecification = originalSpecification;
 		}
 
-		/// <summary>
-		/// Constructor for NotSpecification
-		/// </summary>
-		/// <param name="originalSpecification">Original specificaiton</param>
-		public NotSpecification(Expression<Func<TEntity, bool>> originalSpecification)
+        /// <summary>
+        /// Initializes a new instance of <see cref="NotSpecification{TEntity}"/> class.
+        /// </summary>
+        /// <param name="originalSpecification">Original specificaiton</param>
+        public NotSpecification(Expression<Func<TEntity, bool>> originalSpecification)
 		{
 			OriginalSpecification = new DirectSpecification<TEntity>(originalSpecification);
 		}
 
-		public Specification<TEntity> OriginalSpecification
+		internal Specification<TEntity> OriginalSpecification
 		{
 			get { return _originalSpecification; }
 			private set

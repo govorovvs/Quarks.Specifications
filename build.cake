@@ -77,7 +77,7 @@ Task("Tests")
 			BuildProject(project);
 		}
 		
-		string pattern = TESTS_DIR + "/**/" + configuration + "/**/Quarks.Specifications*.Tests.dll";
+		string pattern = TESTS_DIR + "/**/" + configuration + "/**/Quarks.*.Tests.dll";
 
 		RunTests(pattern);
 	}

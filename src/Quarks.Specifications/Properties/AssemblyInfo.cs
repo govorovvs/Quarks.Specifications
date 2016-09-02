@@ -17,3 +17,4 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("1d38a540-7636-493d-8923-4b92c72161a6")]
+[assembly: InternalsVisibleTo("Quarks.Specifications.Tests")]

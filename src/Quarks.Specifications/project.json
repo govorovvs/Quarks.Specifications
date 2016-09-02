@@ -1,32 +1,37 @@
-﻿{
-  "title": "Quarks.Specifications",
-  "description": "Foundations for specifications",
-
-  "packOptions": {
-    "authors": [ "victor.govorov" ],
-    "owners": [ "victor.govorov" ],
-    "projectUrl": "https://github.com/govorovvs/Specifications",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/govorovvs/Specifications"
-    },
-    "tags": [ "architecture", "specification" ]
-  },
-
-  "version": "1.0.0-*",
-
+{
+  "description": "Quarks.Specifications",
   "frameworks": {
+    "net45": {
+    },
     "netcoreapp1.0": {
       "dependencies": {
-        "NETStandard.Library": "1.6.0"
+        "System.Linq": "4.1.0",
+        "System.Linq.Expressions": "4.1.0",
+        "System.Runtime.InteropServices": "4.1.0"
       }
     },
     "netstandard1.6": {
       "dependencies": {
-        "NETStandard.Library": "1.6.0"
+        "System.Linq": "4.1.0",
+        "System.Linq.Expressions": "4.1.0",
+        "System.Runtime.InteropServices": "4.1.0"
       }
-    },
-    "net46": {
     }
+  },
+  "packOptions": {
+    "authors": [ "victor.govorov" ],
+    "iconUrl": "https://github.com/govorovvs/Quarks.Specifications/blob/master/logo.png?raw=true",
+    "owners": [ "victor.govorov" ],
+    "projectUrl": "https://github.com/govorovvs/Quarks.Specifications",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/govorovvs/Quarks.Specifications.git"
+    },
+    "tags": [ "architecture", "domain", "model", "design", "ddd" ]
+  },
+  "title": "Quarks.Specifications",
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "xmlDoc": true
   }
 }

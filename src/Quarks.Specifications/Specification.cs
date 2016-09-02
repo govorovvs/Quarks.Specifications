@@ -19,14 +19,25 @@ namespace Quarks.Specifications
 	{
 		private Expression<Func<TEntity, bool>> _expression;
 
+        /// <summary>
+        /// Checks if specified entity satisfies this specification. 
+        /// </summary>
+        /// <param name="entity">Entity to be checked.</param>
+        /// <returns>true - if entity satisfies; otherwise - false</returns>
 		public bool IsSatisfiedBy(TEntity entity)
 		{
 			return Predicate == null || Predicate(entity);
 		}
 
+        /// <summary>
+        /// Predicate used by this specification.
+        /// </summary>
 		public Func<TEntity, bool> Predicate { get; protected set; }
 
-		public Expression<Func<TEntity, bool>> Expression
+        /// <summary>
+        /// Expression used by this specification.
+        /// </summary>
+        public Expression<Func<TEntity, bool>> Expression
 		{
 			get { return _expression; }
 			protected set

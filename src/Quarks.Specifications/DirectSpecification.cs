@@ -12,11 +12,11 @@ namespace Quarks.Specifications
 	public sealed class DirectSpecification<TEntity> : Specification<TEntity>
 		where TEntity : class
 	{
-		/// <summary>
-		/// Default constructor for Direct Specification
-		/// </summary>
-		/// <param name="matchingCriteria">A Matching Criteria</param>
-		public DirectSpecification(Expression<Func<TEntity, bool>> matchingCriteria)
+        /// <summary>
+        /// Initializes a new instance of <see cref="DirectSpecification{TEntity}" /> class.
+        /// </summary>
+        /// <param name="matchingCriteria">A Matching Criteria</param>
+        public DirectSpecification(Expression<Func<TEntity, bool>> matchingCriteria)
 		{
 			if (matchingCriteria == null) throw new ArgumentNullException(nameof(matchingCriteria));
 
