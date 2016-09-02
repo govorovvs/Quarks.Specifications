@@ -27,7 +27,7 @@
       "type": "git",
       "url": "https://github.com/govorovvs/Quarks.Specifications.git"
     },
-    "tags": [ "architecture", "domain", "model", "design", "ddd" ]
+    "tags": [ "architecture", "specifications", "domain", "ddd" ]
   },
   "title": "Quarks.Specifications",
   "version": "1.0.0-*",
