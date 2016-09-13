@@ -47,26 +47,26 @@ namespace Quarks.Specifications
 			}
 		}
 
-		/// <summary>
-		///  And operator
-		/// </summary>
-		/// <param name="leftSideSpecification">left operand in this AND operation</param>
-		/// <param name="rightSideSpecification">right operand in this AND operation</param>
-		/// <returns>New specification</returns>
-		public static Specification<TEntity> operator &(Specification<TEntity> leftSideSpecification, Specification<TEntity> rightSideSpecification)
+        /// <summary>
+        ///  And operator
+        /// </summary>
+        /// <param name="left">left operand in this AND operation</param>
+        /// <param name="right">right operand in this AND operation</param>
+        /// <returns>New specification</returns>
+        public static Specification<TEntity> operator &(Specification<TEntity> left, Specification<TEntity> right)
 		{
-			return new AndSpecification<TEntity>(leftSideSpecification, rightSideSpecification);
+			return left.And(right);
 		}
 
-		/// <summary>
-		/// Or operator
-		/// </summary>
-		/// <param name="leftSideSpecification">left operand in this OR operation</param>
-		/// <param name="rightSideSpecification">left operand in this OR operation</param>
-		/// <returns>New specification </returns>
-		public static Specification<TEntity> operator |(Specification<TEntity> leftSideSpecification, Specification<TEntity> rightSideSpecification)
+        /// <summary>
+        /// Or operator
+        /// </summary>
+        /// <param name="left">left operand in this OR operation</param>
+        /// <param name="right">right operand in this OR operation</param>
+        /// <returns>New specification </returns>
+        public static Specification<TEntity> operator |(Specification<TEntity> left, Specification<TEntity> right)
 		{
-			return new OrSpecification<TEntity>(leftSideSpecification, rightSideSpecification);
+			return left.Or(right);
 		}
 
 		/// <summary>
@@ -76,7 +76,7 @@ namespace Quarks.Specifications
 		/// <returns>New specification</returns>
 		public static Specification<TEntity> operator !(Specification<TEntity> specification)
 		{
-			return new NotSpecification<TEntity>(specification);
+			return specification.Not();
 		}
 	}
 }
