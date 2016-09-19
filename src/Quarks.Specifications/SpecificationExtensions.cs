@@ -48,5 +48,37 @@ namespace Quarks.Specifications
 		{
 			return source.FirstOrDefault(specification.Predicate);
 		}
-	}
+
+        /// <summary>
+		///  And operator
+		/// </summary>
+		/// <param name="left">left operand in this AND operation</param>
+		/// <param name="right">right operand in this AND operation</param>
+		/// <returns>New specification</returns>
+        public static Specification<TEntity> And<TEntity>(this Specification<TEntity> left, Specification<TEntity> right) where TEntity : class
+        {
+            return new AndSpecification<TEntity>(left, right);
+        }
+
+        /// <summary>
+		/// Or operator
+		/// </summary>
+		/// <param name="left">left operand in this OR operation</param>
+		/// <param name="right">right operand in this OR operation</param>
+		/// <returns>New specification </returns>
+        public static Specification<TEntity> Or<TEntity>(this Specification<TEntity> left, Specification<TEntity> right) where TEntity : class
+        {
+            return new OrSpecification<TEntity>(left, right);
+        }
+
+        /// <summary>
+		/// Not specification
+		/// </summary>
+		/// <param name="spec">Specification to negate</param>
+		/// <returns>New specification</returns>
+        public static Specification<TEntity> Not<TEntity>(this Specification<TEntity> spec) where TEntity : class
+        {
+            return new NotSpecification<TEntity>(spec);
+        }
+    }
 }
