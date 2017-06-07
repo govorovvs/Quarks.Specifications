@@ -2,7 +2,7 @@
 
 namespace Quarks.Specifications
 {
-	/// <summary>
+    /// <summary>
 	/// Base class for composite specifications
 	/// </summary>
 	/// <typeparam name="TEntity">Type of entity that check this specification</typeparam>

@@ -2,7 +2,7 @@
 
 namespace Quarks.Specifications
 {
-	/// <summary>
+    /// <summary>
 	/// A Logic OR Specification
 	/// </summary>
 	/// <typeparam name="T">Type of entity that check this specification</typeparam>
@@ -17,7 +17,7 @@ namespace Quarks.Specifications
         public OrSpecification(Specification<T> leftSide, Specification<T> rightSide)
 			: base(leftSide, rightSide)
 		{
-			Expression = leftSide.Expression.OrElse(rightSide.Expression);
+			Expression = Impl.ExpressionExtensions.OrElse(leftSide.Expression, rightSide.Expression);
 		}
 
         /// <summary>

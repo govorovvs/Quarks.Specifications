@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 namespace Quarks.Specifications
 {
-	/// <summary>
+    /// <summary>
 	/// A Direct Specification is a simple implementation
 	/// of specification that acquire this from a lambda expression
 	/// in  constructor
@@ -22,5 +22,5 @@ namespace Quarks.Specifications
 
 			Expression = matchingCriteria;
 		}
-	}
+    }
 }

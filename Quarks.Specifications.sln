@@ -1,25 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Quarks.Specifications", "src\Quarks.Specifications\Quarks.Specifications.xproj", "{1D38A540-7636-493D-8923-4B92C72161A6}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Quarks.Specifications.Tests", "tests\Quarks.Specifications.Tests\Quarks.Specifications.Tests.xproj", "{CE1AB349-9678-4CC5-A353-9B404B0E4887}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1B736DBD-D596-4A84-B999-9D82E2775B66}"
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
 		build.cake = build.cake
 		build.cmd = build.cmd
 		build.ps1 = build.ps1
-		global.json = global.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{0716ECFF-5B37-4E72-8AFF-2F4744F836B0}"
 	ProjectSection(SolutionItems) = preProject
 		tools\packages.config = tools\packages.config
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quarks.Specifications", "src\Quarks.Specifications\Quarks.Specifications.csproj", "{1D38A540-7636-493D-8923-4B92C72161A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quarks.Specifications.Tests", "tests\Quarks.Specifications.Tests\Quarks.Specifications.Tests.csproj", "{CE1AB349-9678-4CC5-A353-9B404B0E4887}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

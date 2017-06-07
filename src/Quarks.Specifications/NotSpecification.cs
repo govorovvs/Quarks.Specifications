@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace Quarks.Specifications
 {
-	/// <summary>
+    /// <summary>
 	/// NotSpecification convert a original specification with NOT logic operator
 	/// </summary>
 	/// <typeparam name="TEntity">Type of element for this specificaiton</typeparam>

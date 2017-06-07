@@ -13,14 +13,21 @@ namespace Quarks.Specifications
         /// <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1" /> that contains elements from the input sequence that satisfy the condition.</returns>
         /// <param name="source">An <see cref="IEnumerable{TSource}" /> to filter.</param>
         /// <param name="specification">A specification to test each element for a condition.</param>
-        /// <typeparam name="TSource">The type of the elements of <paramref name="source" />.</typeparam>
-        /// <exception cref="ArgumentNullException">
-        /// <paramref name="source" /> or <paramref name="specification" /> is null.</exception>
         public static IEnumerable<TSource> Where<TSource>(this IEnumerable<TSource> source, Specification<TSource> specification)
 			where TSource : class
 		{
 			return source.Where(specification.Predicate);
 		}
+
+	    /// <summary>Filters a sequence of values based on a specification.</summary>
+	    /// <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1" /> that contains elements from the input sequence that satisfy the condition.</returns>
+	    /// <param name="source">An <see cref="IEnumerable{TSource}" /> to filter.</param>
+	    /// <param name="specification">A specification to test each element for a condition.</param>
+        public static IQueryable<TSource> Where<TSource>(this IQueryable<TSource> source, Specification<TSource> specification)
+           where TSource : class
+        {
+            return source.Where(specification.Expression);
+        }
 
         /// <summary>Returns the first element in a sequence that satisfies a specified specification.</summary>
         /// <returns>The first element in the sequence that passes the test in the specified specification.</returns>

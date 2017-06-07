@@ -5,6 +5,22 @@ namespace Quarks.Specifications
 {
     /// <summary>
     /// Represent a Expression Specification
+    /// </summary>
+    public static class Specification
+    {
+        /// <summary>
+        /// Returns an empty specification
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <returns>Empty specification</returns>
+        public static Specification<TEntity> Empty<TEntity>() where TEntity : class
+        {
+            return new TrueSpecification<TEntity>();
+        }
+    }
+
+    /// <summary>
+    /// Represent a Expression Specification
     /// <remarks>
     /// Specification overload operators for create AND, OR or NOT specifications.
     /// Additionally overload AND and OR operators with the same sense of ( binary And and binary Or ).
@@ -78,5 +94,5 @@ namespace Quarks.Specifications
 		{
 			return specification.Not();
 		}
-	}
+    }
 }

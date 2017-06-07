@@ -2,7 +2,7 @@
 
 namespace Quarks.Specifications
 {
-	/// <summary>
+    /// <summary>
 	/// A logic AND Specification
 	/// </summary>
 	/// <typeparam name="T">Type of entity that check this specification</typeparam>
@@ -17,7 +17,7 @@ namespace Quarks.Specifications
         public AndSpecification(Specification<T> leftSide, Specification<T> rightSide)
 			: base(leftSide, rightSide)
 		{
-			Expression = leftSide.Expression.AndAlso(rightSide.Expression);
+			Expression = Impl.ExpressionExtensions.AndAlso(leftSide.Expression, rightSide.Expression);
 		}
 
         /// <summary>
